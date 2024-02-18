@@ -21,5 +21,23 @@ namespace Car_rental_system
         {
 
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            Register register = new Register();
+            register.Show();
+            this.Hide();
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            UserNameInput.Text = "";
+            PasswordInput.Text = "";
+        }
     }
 }

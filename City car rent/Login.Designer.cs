@@ -39,13 +39,14 @@
             label2 = new Label();
             label1 = new Label();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            label5 = new Label();
-            button1 = new Button();
-            label6 = new Label();
-            label7 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            LoginLabel = new Label();
+            LoginButton = new Button();
+            UserNameLabel = new Label();
+            PasswordLabel = new Label();
+            UserNameInput = new TextBox();
+            PasswordInput = new TextBox();
+            ClearButton = new Guna.UI2.WinForms.Guna2Button();
+            RegisterButton = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
@@ -126,91 +127,106 @@
             guna2PictureBox1.TabIndex = 2;
             guna2PictureBox1.TabStop = false;
             // 
-            // label5
+            // LoginLabel
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.Red;
-            label5.Location = new Point(550, 65);
-            label5.Name = "label5";
-            label5.Size = new Size(92, 29);
-            label5.TabIndex = 1;
-            label5.Text = "LOGIN";
+            LoginLabel.AutoSize = true;
+            LoginLabel.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            LoginLabel.ForeColor = Color.Red;
+            LoginLabel.Location = new Point(374, 64);
+            LoginLabel.Name = "LoginLabel";
+            LoginLabel.Size = new Size(92, 29);
+            LoginLabel.TabIndex = 1;
+            LoginLabel.Text = "LOGIN";
             // 
-            // button1
+            // LoginButton
             // 
-            button1.BackColor = Color.Red;
-            button1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(473, 422);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(250, 62);
-            button1.TabIndex = 2;
-            button1.Text = "LOGIN";
-            button1.UseVisualStyleBackColor = false;
+            LoginButton.BackColor = Color.Red;
+            LoginButton.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            LoginButton.ForeColor = Color.White;
+            LoginButton.Location = new Point(512, 472);
+            LoginButton.Margin = new Padding(3, 4, 3, 4);
+            LoginButton.Name = "LoginButton";
+            LoginButton.Size = new Size(227, 53);
+            LoginButton.TabIndex = 2;
+            LoginButton.Text = "LOGIN";
+            LoginButton.UseVisualStyleBackColor = false;
             // 
-            // label6
+            // UserNameLabel
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.Red;
-            label6.Location = new Point(374, 149);
-            label6.Name = "label6";
-            label6.Size = new Size(132, 29);
-            label6.TabIndex = 3;
-            label6.Text = "Username";
+            UserNameLabel.AutoSize = true;
+            UserNameLabel.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            UserNameLabel.ForeColor = Color.Red;
+            UserNameLabel.Location = new Point(374, 149);
+            UserNameLabel.Name = "UserNameLabel";
+            UserNameLabel.Size = new Size(132, 29);
+            UserNameLabel.TabIndex = 3;
+            UserNameLabel.Text = "Username";
             // 
-            // label7
+            // PasswordLabel
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.Red;
-            label7.Location = new Point(374, 275);
-            label7.Name = "label7";
-            label7.Size = new Size(128, 29);
-            label7.TabIndex = 4;
-            label7.Text = "Password";
+            PasswordLabel.AutoSize = true;
+            PasswordLabel.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            PasswordLabel.ForeColor = Color.Red;
+            PasswordLabel.Location = new Point(374, 275);
+            PasswordLabel.Name = "PasswordLabel";
+            PasswordLabel.Size = new Size(128, 29);
+            PasswordLabel.TabIndex = 4;
+            PasswordLabel.Text = "Password";
             // 
-            // textBox1
+            // UserNameInput
             // 
-            textBox1.BackColor = Color.Silver;
-            textBox1.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(512, 149);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(255, 44);
-            textBox1.TabIndex = 5;
+            UserNameInput.BackColor = Color.Silver;
+            UserNameInput.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            UserNameInput.Location = new Point(512, 149);
+            UserNameInput.Margin = new Padding(3, 4, 3, 4);
+            UserNameInput.Multiline = true;
+            UserNameInput.Name = "UserNameInput";
+            UserNameInput.Size = new Size(284, 44);
+            UserNameInput.TabIndex = 5;
             // 
-            // textBox2
+            // PasswordInput
             // 
-            textBox2.BackColor = Color.Silver;
-            textBox2.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(512, 266);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(255, 44);
-            textBox2.TabIndex = 6;
+            PasswordInput.BackColor = Color.Silver;
+            PasswordInput.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
+            PasswordInput.Location = new Point(512, 266);
+            PasswordInput.Margin = new Padding(3, 4, 3, 4);
+            PasswordInput.Multiline = true;
+            PasswordInput.Name = "PasswordInput";
+            PasswordInput.Size = new Size(284, 44);
+            PasswordInput.TabIndex = 6;
             // 
-            // guna2Button1
+            // ClearButton
             // 
-            guna2Button1.CustomizableEdges = customizableEdges3;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.Red;
-            guna2Button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(512, 509);
-            guna2Button1.Margin = new Padding(3, 4, 3, 4);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button1.Size = new Size(180, 56);
-            guna2Button1.TabIndex = 7;
-            guna2Button1.Text = "Clear";
+            ClearButton.CustomizableEdges = customizableEdges3;
+            ClearButton.DisabledState.BorderColor = Color.DarkGray;
+            ClearButton.DisabledState.CustomBorderColor = Color.DarkGray;
+            ClearButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            ClearButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            ClearButton.FillColor = Color.Red;
+            ClearButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            ClearButton.ForeColor = Color.White;
+            ClearButton.Location = new Point(747, 0);
+            ClearButton.Margin = new Padding(3, 4, 3, 4);
+            ClearButton.Name = "ClearButton";
+            ClearButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            ClearButton.Size = new Size(100, 34);
+            ClearButton.TabIndex = 7;
+            ClearButton.Text = "Clear";
+            ClearButton.Click += ClearButton_Click;
+            // 
+            // RegisterButton
+            // 
+            RegisterButton.BackColor = Color.Red;
+            RegisterButton.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            RegisterButton.ForeColor = Color.White;
+            RegisterButton.Location = new Point(512, 549);
+            RegisterButton.Margin = new Padding(3, 4, 3, 4);
+            RegisterButton.Name = "RegisterButton";
+            RegisterButton.Size = new Size(227, 53);
+            RegisterButton.TabIndex = 8;
+            RegisterButton.Text = "REGISTER";
+            RegisterButton.UseVisualStyleBackColor = false;
+            RegisterButton.Click += RegisterButton_Click;
             // 
             // Login
             // 
@@ -218,19 +234,21 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(847, 655);
-            Controls.Add(guna2Button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(button1);
-            Controls.Add(label5);
+            Controls.Add(RegisterButton);
+            Controls.Add(ClearButton);
+            Controls.Add(PasswordInput);
+            Controls.Add(UserNameInput);
+            Controls.Add(PasswordLabel);
+            Controls.Add(UserNameLabel);
+            Controls.Add(LoginButton);
+            Controls.Add(LoginLabel);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            Load += Login_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
@@ -246,12 +264,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Label LoginLabel;
+        private System.Windows.Forms.Button LoginButton;
+        private System.Windows.Forms.Label UserNameLabel;
+        private System.Windows.Forms.Label PasswordLabel;
+        private System.Windows.Forms.TextBox UserNameInput;
+        private System.Windows.Forms.TextBox PasswordInput;
+        private Guna.UI2.WinForms.Guna2Button ClearButton;
+        private Button RegisterButton;
     }
 }
