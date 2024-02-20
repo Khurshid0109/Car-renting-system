@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 namespace City_rent_car.Data.Data;
 public class DataContext:DbContext
 {
-    public DbSet<User> Users { get; set; }
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public DataContext(DbContextOptions<DataContext> options):base(options)
     {
-        optionsBuilder.UseNpgsql("server=localhost; Port=5432; Database=CarRent; User Id=postgres; Password=Xy010903");
     }
+    public DbSet<User> Users { get; set; }
+    
 }

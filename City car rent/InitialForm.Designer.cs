@@ -110,7 +110,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Red;
-            ClientSize = new Size(886, 589);
+            ClientSize = new Size(842, 589);
             Controls.Add(label1);
             Controls.Add(MyProgress);
             FormBorderStyle = FormBorderStyle.None;

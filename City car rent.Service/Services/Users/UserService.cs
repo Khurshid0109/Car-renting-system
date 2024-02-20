@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using City_car_rent.Domain.Entities;
+using City_car_rent.Service.Helpers;
 using Microsoft.EntityFrameworkCore;
 using City_rent_car.Data.IRepositories;
 using City_car_rent.Service.DTOs.UserDtos;
@@ -25,8 +26,11 @@ public class UserService : IUserService
             .AnyAsync();
 
         if (user)
-            return null;
+            throw new CustomException("User already exists with this username! Please try another one.");
+
         var mapped = _mapper.Map<User>(dto);
+        mapped.CreatedAt = DateTime.UtcNow;
+
         var result = await _repository.CreateAsync(mapped);
         await _repository.SaveAsync();
 
