@@ -46,4 +46,10 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Images\CarImage\" />
+    <Folder Include="Images\UserImage\" />
+    <Folder Include="Images\PassportImage\" />
+  </ItemGroup>
+
 </Project>

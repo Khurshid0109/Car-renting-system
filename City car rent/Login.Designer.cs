@@ -150,6 +150,7 @@
             LoginButton.TabIndex = 2;
             LoginButton.Text = "LOGIN";
             LoginButton.UseVisualStyleBackColor = false;
+            LoginButton.Click += LoginButton_Click;
             // 
             // UserNameLabel
             // 
