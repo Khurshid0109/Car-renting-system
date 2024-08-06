@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             label4 = new Label();
             label3 = new Label();
@@ -122,13 +122,13 @@
             // 
             // guna2PictureBox1
             // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges1;
+            guna2PictureBox1.CustomizableEdges = customizableEdges5;
             guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(23, 205);
             guna2PictureBox1.Margin = new Padding(3, 4, 3, 4);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2PictureBox1.Size = new Size(300, 211);
             guna2PictureBox1.TabIndex = 2;
             guna2PictureBox1.TabStop = false;
@@ -182,7 +182,7 @@
             // 
             // ClearButton
             // 
-            ClearButton.CustomizableEdges = customizableEdges3;
+            ClearButton.CustomizableEdges = customizableEdges7;
             ClearButton.DisabledState.BorderColor = Color.DarkGray;
             ClearButton.DisabledState.CustomBorderColor = Color.DarkGray;
             ClearButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -193,7 +193,7 @@
             ClearButton.Location = new Point(757, 0);
             ClearButton.Margin = new Padding(3, 4, 3, 4);
             ClearButton.Name = "ClearButton";
-            ClearButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            ClearButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
             ClearButton.Size = new Size(88, 34);
             ClearButton.TabIndex = 7;
             ClearButton.Text = "Clear";
@@ -228,7 +228,7 @@
             // 
             LastNameInput.AutoCompleteSource = AutoCompleteSource.RecentlyUsedList;
             LastNameInput.BackColor = Color.Silver;
-            LastNameInput.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            LastNameInput.Font = new Font("Cooper Black", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             LastNameInput.Location = new Point(512, 205);
             LastNameInput.Margin = new Padding(3, 4, 3, 4);
             LastNameInput.Multiline = true;
@@ -237,12 +237,13 @@
             LastNameInput.Size = new Size(286, 36);
             LastNameInput.TabIndex = 10;
             LastNameInput.Text = "LastName";
+            LastNameInput.TextAlign = HorizontalAlignment.Center;
             LastNameInput.UseWaitCursor = true;
             // 
             // PhoneInput
             // 
             PhoneInput.BackColor = Color.Silver;
-            PhoneInput.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            PhoneInput.Font = new Font("Cooper Black", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             PhoneInput.Location = new Point(512, 269);
             PhoneInput.Margin = new Padding(3, 4, 3, 4);
             PhoneInput.Multiline = true;
@@ -250,6 +251,7 @@
             PhoneInput.PlaceholderText = "+998 *** ** **";
             PhoneInput.Size = new Size(286, 36);
             PhoneInput.TabIndex = 11;
+            PhoneInput.TextAlign = HorizontalAlignment.Center;
             // 
             // PhoneLabel
             // 
@@ -285,7 +287,7 @@
             // 
             FirstNameInput.AutoCompleteSource = AutoCompleteSource.RecentlyUsedList;
             FirstNameInput.BackColor = Color.Silver;
-            FirstNameInput.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            FirstNameInput.Font = new Font("Cooper Black", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             FirstNameInput.Location = new Point(512, 145);
             FirstNameInput.Margin = new Padding(3, 4, 3, 4);
             FirstNameInput.Multiline = true;
@@ -294,6 +296,7 @@
             FirstNameInput.Size = new Size(286, 36);
             FirstNameInput.TabIndex = 14;
             FirstNameInput.Text = "FirstName";
+            FirstNameInput.TextAlign = HorizontalAlignment.Center;
             FirstNameInput.UseWaitCursor = true;
             // 
             // label5

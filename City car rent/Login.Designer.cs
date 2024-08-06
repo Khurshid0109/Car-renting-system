@@ -157,18 +157,18 @@
             UserNameLabel.AutoSize = true;
             UserNameLabel.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             UserNameLabel.ForeColor = Color.Red;
-            UserNameLabel.Location = new Point(374, 149);
+            UserNameLabel.Location = new Point(370, 168);
             UserNameLabel.Name = "UserNameLabel";
-            UserNameLabel.Size = new Size(132, 29);
+            UserNameLabel.Size = new Size(88, 29);
             UserNameLabel.TabIndex = 3;
-            UserNameLabel.Text = "Username";
+            UserNameLabel.Text = "Phone";
             // 
             // PasswordLabel
             // 
             PasswordLabel.AutoSize = true;
             PasswordLabel.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             PasswordLabel.ForeColor = Color.Red;
-            PasswordLabel.Location = new Point(374, 275);
+            PasswordLabel.Location = new Point(374, 266);
             PasswordLabel.Name = "PasswordLabel";
             PasswordLabel.Size = new Size(128, 29);
             PasswordLabel.TabIndex = 4;
@@ -178,7 +178,7 @@
             // 
             UserNameInput.BackColor = Color.Silver;
             UserNameInput.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            UserNameInput.Location = new Point(512, 149);
+            UserNameInput.Location = new Point(512, 168);
             UserNameInput.Margin = new Padding(3, 4, 3, 4);
             UserNameInput.Multiline = true;
             UserNameInput.Name = "UserNameInput";
