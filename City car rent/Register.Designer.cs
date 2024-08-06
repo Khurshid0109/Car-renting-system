@@ -41,18 +41,18 @@
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             RegisterLabel = new Label();
             RegisterButton = new Button();
-            UserNameLabel = new Label();
             PasswordLabel = new Label();
-            UserNameInput = new TextBox();
             PasswordInput = new TextBox();
             ClearButton = new Guna.UI2.WinForms.Guna2Button();
             LoginButton = new Button();
             NameLabel = new Label();
-            NameInput = new TextBox();
+            LastNameInput = new TextBox();
             PhoneInput = new TextBox();
             PhoneLabel = new Label();
             PassportImgButton = new Button();
             npgsqlCommandBuilder1 = new Npgsql.NpgsqlCommandBuilder();
+            FirstNameInput = new TextBox();
+            label5 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
@@ -158,17 +158,6 @@
             RegisterButton.UseVisualStyleBackColor = false;
             RegisterButton.Click += RegisterButton_Click;
             // 
-            // UserNameLabel
-            // 
-            UserNameLabel.AutoSize = true;
-            UserNameLabel.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            UserNameLabel.ForeColor = Color.Red;
-            UserNameLabel.Location = new Point(360, 205);
-            UserNameLabel.Name = "UserNameLabel";
-            UserNameLabel.Size = new Size(132, 29);
-            UserNameLabel.TabIndex = 3;
-            UserNameLabel.Text = "Username";
-            // 
             // PasswordLabel
             // 
             PasswordLabel.AutoSize = true;
@@ -179,17 +168,6 @@
             PasswordLabel.Size = new Size(128, 29);
             PasswordLabel.TabIndex = 4;
             PasswordLabel.Text = "Password";
-            // 
-            // UserNameInput
-            // 
-            UserNameInput.BackColor = Color.Silver;
-            UserNameInput.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            UserNameInput.Location = new Point(512, 205);
-            UserNameInput.Margin = new Padding(3, 4, 3, 4);
-            UserNameInput.Multiline = true;
-            UserNameInput.Name = "UserNameInput";
-            UserNameInput.Size = new Size(286, 36);
-            UserNameInput.TabIndex = 5;
             // 
             // PasswordInput
             // 
@@ -240,25 +218,26 @@
             NameLabel.AutoSize = true;
             NameLabel.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             NameLabel.ForeColor = Color.Red;
-            NameLabel.Location = new Point(360, 145);
+            NameLabel.Location = new Point(366, 205);
             NameLabel.Name = "NameLabel";
-            NameLabel.Size = new Size(82, 29);
+            NameLabel.Size = new Size(130, 29);
             NameLabel.TabIndex = 9;
-            NameLabel.Text = "Name";
+            NameLabel.Text = "LastName";
             // 
-            // NameInput
+            // LastNameInput
             // 
-            NameInput.AutoCompleteSource = AutoCompleteSource.RecentlyUsedList;
-            NameInput.BackColor = Color.Silver;
-            NameInput.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            NameInput.Location = new Point(512, 145);
-            NameInput.Margin = new Padding(3, 4, 3, 4);
-            NameInput.Multiline = true;
-            NameInput.Name = "NameInput";
-            NameInput.PlaceholderText = "FullName";
-            NameInput.Size = new Size(286, 36);
-            NameInput.TabIndex = 10;
-            NameInput.UseWaitCursor = true;
+            LastNameInput.AutoCompleteSource = AutoCompleteSource.RecentlyUsedList;
+            LastNameInput.BackColor = Color.Silver;
+            LastNameInput.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            LastNameInput.Location = new Point(512, 205);
+            LastNameInput.Margin = new Padding(3, 4, 3, 4);
+            LastNameInput.Multiline = true;
+            LastNameInput.Name = "LastNameInput";
+            LastNameInput.PlaceholderText = "FullName";
+            LastNameInput.Size = new Size(286, 36);
+            LastNameInput.TabIndex = 10;
+            LastNameInput.Text = "LastName";
+            LastNameInput.UseWaitCursor = true;
             // 
             // PhoneInput
             // 
@@ -293,7 +272,7 @@
             PassportImgButton.Name = "PassportImgButton";
             PassportImgButton.Size = new Size(438, 46);
             PassportImgButton.TabIndex = 13;
-            PassportImgButton.Text = "Share your passpord image";
+            PassportImgButton.Text = "Driver license image";
             PassportImgButton.UseVisualStyleBackColor = false;
             PassportImgButton.Click += PassportImgButton_Click;
             // 
@@ -302,23 +281,49 @@
             npgsqlCommandBuilder1.QuotePrefix = "\"";
             npgsqlCommandBuilder1.QuoteSuffix = "\"";
             // 
+            // FirstNameInput
+            // 
+            FirstNameInput.AutoCompleteSource = AutoCompleteSource.RecentlyUsedList;
+            FirstNameInput.BackColor = Color.Silver;
+            FirstNameInput.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            FirstNameInput.Location = new Point(512, 145);
+            FirstNameInput.Margin = new Padding(3, 4, 3, 4);
+            FirstNameInput.Multiline = true;
+            FirstNameInput.Name = "FirstNameInput";
+            FirstNameInput.PlaceholderText = "FullName";
+            FirstNameInput.Size = new Size(286, 36);
+            FirstNameInput.TabIndex = 14;
+            FirstNameInput.Text = "FirstName";
+            FirstNameInput.UseWaitCursor = true;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.Red;
+            label5.Location = new Point(366, 145);
+            label5.Name = "label5";
+            label5.Size = new Size(134, 29);
+            label5.TabIndex = 15;
+            label5.Text = "FirstName";
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(847, 655);
+            Controls.Add(label5);
+            Controls.Add(FirstNameInput);
             Controls.Add(PassportImgButton);
             Controls.Add(PhoneLabel);
             Controls.Add(PhoneInput);
-            Controls.Add(NameInput);
+            Controls.Add(LastNameInput);
             Controls.Add(NameLabel);
             Controls.Add(LoginButton);
             Controls.Add(ClearButton);
             Controls.Add(PasswordInput);
-            Controls.Add(UserNameInput);
             Controls.Add(PasswordLabel);
-            Controls.Add(UserNameLabel);
             Controls.Add(RegisterButton);
             Controls.Add(RegisterLabel);
             Controls.Add(panel1);
@@ -345,17 +350,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label RegisterLabel;
         private System.Windows.Forms.Button RegisterButton;
-        private System.Windows.Forms.Label UserNameLabel;
         private System.Windows.Forms.Label PasswordLabel;
-        private System.Windows.Forms.TextBox UserNameInput;
         private System.Windows.Forms.TextBox PasswordInput;
         private Guna.UI2.WinForms.Guna2Button ClearButton;
         private Button LoginButton;
         private Label NameLabel;
-        private TextBox NameInput;
+        private TextBox LastNameInput;
         private TextBox PhoneInput;
         private Label PhoneLabel;
         private Button PassportImgButton;
         private Npgsql.NpgsqlCommandBuilder npgsqlCommandBuilder1;
+        private TextBox FirstNameInput;
+        private Label label5;
     }
 }

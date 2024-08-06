@@ -1,19 +1,19 @@
 ﻿using City_car_rent;
+using City_car_rent.Service.DTOs.CustomerDto;
 using City_car_rent.Service.Helpers;
+using City_car_rent.Service.Interfaces.Customers;
 using System.Text.RegularExpressions;
-using City_car_rent.Service.DTOs.UserDtos;
-using City_car_rent.Service.Interfaces.Users;
 
 namespace Car_rental_system
 {
     public partial class Register : Form
     {
-        private readonly IUserService _userService;
-        private UserPostModel user = new UserPostModel();
+        private readonly ICustomerService _userService;
+        private CustomerPostModel user = new CustomerPostModel();
         public Register()
         {
             InitializeComponent();
-            _userService = Program.GetService<IUserService>();
+            _userService = Program.GetService<ICustomerService>();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -25,14 +25,15 @@ namespace Car_rental_system
         {
             try
             {
-                user.Name = NameInput.Text;
-                user.Username = UserNameInput.Text;
+                user.FirstName = FirstNameInput.Text;
+                user.LastName = LastNameInput.Text;
                 user.PhoneNumber = PhoneInput.Text;
                 user.Password = PasswordInput.Text;
 
                 if (ValidateInputs(user))
                 {
                     await _userService.AddAsync(user);
+
 
                 }
             }
@@ -62,8 +63,8 @@ namespace Car_rental_system
 
         private void ClearButton_Click(object sender, EventArgs e)
         {
-            NameInput.Text = "";
-            UserNameInput.Text = "";
+            LastNameInput.Text = "";
+            FirstNameInput.Text = "";
             PhoneInput.Text = "";
             PasswordInput.Text = "";
         }
@@ -72,7 +73,7 @@ namespace Car_rental_system
         {
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
-                Title = "Select Passport Image",
+                Title = "Select license Image",
                 Filter = "Image Files|*.bmp;*.jpg;*.jpeg;*.png;*.gif",
                 Multiselect = false
             };
@@ -81,22 +82,20 @@ namespace Car_rental_system
             {
                 // Get the selected file path
                 string imagePath = openFileDialog.FileName;
-                user.PassportImg = imagePath;
+                user.DriverLicense = imagePath;
                 // Now, you can use the imagePath as needed (e.g., save it, display it, etc.)
                 MessageBox.Show($"Selected Image: {imagePath}", "Image Selected",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-        private bool ValidateInputs(UserPostModel user)
+        private bool ValidateInputs(CustomerPostModel user)
         {
             bool valid = true;
-            // input validation for name
-            string[] nameParts = user.Name.Split(' ');
 
-            if (nameParts.Length != 2 || string.IsNullOrWhiteSpace(nameParts[0]) || string.IsNullOrWhiteSpace(nameParts[1]))
+            if (string.IsNullOrWhiteSpace(user.FirstName) || string.IsNullOrWhiteSpace(user.LastName))
             {
-                MessageBox.Show("Invalid name. Please enter both first name and last name separated by a space.",
+                MessageBox.Show("Invalid name. Please enter both first name and last name correctly.",
                     "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 valid = false;
             }
@@ -109,14 +108,6 @@ namespace Car_rental_system
                 valid = false;
             }
 
-            // input validation for username
-            if (!Regex.IsMatch(user.Username, "^[a-zA-Z]+[a-zA-Z0-9]*$"))
-            {
-                MessageBox.Show("Invalid username. Please enter a valid username.", "Validation Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                valid = false;
-            }
-
             // input validation for password
             if (user.Password.Length < 6 || !Regex.IsMatch(user.Password, @"\d") || !Regex.IsMatch(user.Password, "[a-zA-Z]"))
             {
@@ -125,7 +116,7 @@ namespace Car_rental_system
                 valid = false;
             }
 
-            if (!string.IsNullOrEmpty(user.PassportImg) && File.Exists(user.PassportImg))
+            if (!string.IsNullOrEmpty(user.DriverLicense) && File.Exists(user.DriverLicense))
             {
                 string wwwRootPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "wwwroot");
                 string passportImagePath = Path.Combine(wwwRootPath, "PassportImage");
@@ -136,13 +127,13 @@ namespace Car_rental_system
                     Directory.CreateDirectory(passportImagePath);
                 }
 
-                string fileName = Path.GetFileName(user.PassportImg);
+                string fileName = Path.GetFileName(user.DriverLicense);
                 string destinationPath = Path.Combine(passportImagePath, fileName);
 
-                File.Copy(user.PassportImg, destinationPath, true);
+                File.Copy(user.DriverLicense, destinationPath, true);
 
                 // Now,destinationPath contains the path where the file is saved in PassportImage folder
-                user.PassportImg = destinationPath; 
+                user.DriverLicense = destinationPath; 
             }
             else
             {

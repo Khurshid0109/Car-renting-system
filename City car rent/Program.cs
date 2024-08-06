@@ -1,13 +1,13 @@
 using Car_rental_system;
+using City_car_rent.Service.Interfaces.Customers;
 using City_car_rent.Service.Mappers;
-using City_rent_car.Data.Repositories;
-using City_rent_car.Data.IRepositories;
 using City_car_rent.Service.Services.Users;
-using City_car_rent.Service.Interfaces.Users;
-using Microsoft.Extensions.DependencyInjection;
 using City_rent_car.Data.Data;
-using System.Configuration;
+using City_rent_car.Data.IRepositories;
+using City_rent_car.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using System.Configuration;
 
 namespace City_car_rent
 {
@@ -32,8 +32,8 @@ namespace City_car_rent
 
             services.AddAutoMapper(typeof(MapperProfile));
             services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
-            services.AddScoped<IUserRepository,UserRepository>();
-            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ICustomerRepository,CustomerRepository>();
+            services.AddScoped<ICustomerService, CustomerService>();
             #endregion
 
             // Build the service provider

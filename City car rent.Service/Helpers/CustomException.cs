@@ -1,7 +1,9 @@
 ﻿namespace City_car_rent.Service.Helpers;
 public class CustomException:Exception
 {
-    public CustomException(string message):base(message)
-    {   
+    public int Code { get; set; }
+    public CustomException(int code, string message):base(message)
+    {  
+        Code= code;
     }
 }
