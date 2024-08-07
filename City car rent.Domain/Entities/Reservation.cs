@@ -1,11 +1,14 @@
 ﻿using City_car_rent.Domain.Commons;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace City_car_rent.Domain.Entities;
 public class Reservation:Auditable
 {
-    public int VehicleId { get; set; }
+    [ForeignKey("Vehicle")]
+    public long VehicleId { get; set; }
     public Vehicle Vehicle { get; set; }
-    public int CustomerId { get; set; }
+    [ForeignKey("Customer")]
+    public long CustomerId { get; set; }
     public Customer Customer { get; set; }
     public DateTime ReservationDate { get; set; }  
     public DateTime StartDate { get; set; }      
