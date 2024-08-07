@@ -4,7 +4,7 @@ namespace City_car_rent.Service.Interfaces.Customers;
 public interface ICustomerService
 {
     Task<CustomerViewModel> GetByIdAsync(long id);
-    Task<CustomerViewModel> GetByPhoneAsync(string userName);
+    Task<CustomerViewModel> GetByPhoneAsync(string phone);
     Task<IEnumerable<CustomerViewModel>> GetAllAsync();
     Task<CustomerViewModel> AddAsync(CustomerPostModel dto);
     Task<CustomerViewModel> UpdateAsync(long id, CustomerPutModel dto);

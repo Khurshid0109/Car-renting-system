@@ -17,5 +17,15 @@ public class DataContext:DbContext
     {
         optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=RentCar;User Id=postgres;Password=Alone0109");
     }
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Vehicle>()
+           .HasOne(v => v.Category)
+           .WithMany(c => c.Vehicles)
+           .HasForeignKey(v => v.CategoryId)
+           .OnDelete(DeleteBehavior.Cascade);
+
+        base.OnModelCreating(modelBuilder);
+    }
 
 }
