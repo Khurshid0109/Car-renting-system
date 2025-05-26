@@ -4,7 +4,7 @@ A modern and user-friendly **Car Rental Management System** developed using **Wi
 
 ---
 
-## 📸 Screenshots
+## 📸 Preview
 
 ### 🚘 Landing Page
 ![Landing](https://github.com/Khurshid0109/Car-renting-system/blob/master/City%20car%20rent/wwwroot/Images/Initial_form.png)
